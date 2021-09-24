@@ -8,13 +8,13 @@
 </ion-header>
 
 <ion-content>
-<ion-input type="text" placeholder="Nome">
+<ion-input type="text" placeholder="Nome" [(ngModel)]="nome">
 </ion-input>
-<ion-input type="email" placeholder="E-mail">
+<ion-input type="email" placeholder="E-mail" [(ngModel)]="email">
 </ion-input>
-<ion-input type="tel" placeholder="telefone">
+<ion-input type="tel" placeholder="Telefone" [(ngModel)]="telefone">
 </ion-input>
 
-<ion-button>Ok</ion-button>
+<ion-button (click)="criar()">Ok</ion-button>
 
 </ion-content>
