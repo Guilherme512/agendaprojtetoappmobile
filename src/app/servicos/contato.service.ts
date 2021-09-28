@@ -12,4 +12,13 @@ export class ContatoService {
     console.log(contato);
     this.firestore.collection("contatos").add(contato);
   }
-}
+
+  listar(){
+    return this.firestore.collection("contatos").snapshotChanges();
+   }
+ 
+   excluir(contato){
+     this.firestore.doc("contatos/"+contato.id).delete();
+   }
+ }
+

@@ -14,6 +14,7 @@ export class EditaTarefasPage implements OnInit {
               private  nav: NavController) { }
 
   ngOnInit() {
+    
   }
 
   cadastrar() {

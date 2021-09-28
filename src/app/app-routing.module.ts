@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./paginas/inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'excluir',
+    loadChildren: () => import('./paginas/excluir/excluir.module').then( m => m.ExcluirPageModule)
+  },
 ];
 
 @NgModule({

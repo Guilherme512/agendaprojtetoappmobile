@@ -12,4 +12,13 @@ export class TarefaService {
     console.log(tarefa);
     this.firestore.collection("tarefas").add(tarefa);
   }
+
+  listar(){
+   return this.firestore.collection("tarefas").snapshotChanges();
+  }
+
+  excluir(tarefa){
+    this.firestore.doc("tarefas/"+tarefa.id).delete();
+  }
 }
+
